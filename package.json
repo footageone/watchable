@@ -1,18 +1,25 @@
 {
-  "name": "watchable",
-  "version": "1.0.0",
+  "name": "@footage.one/watchable",
+  "version": "0.0.1",
   "description": "",
   "main": "dist/bundle.js",
   "browser": "dist/bundle.js",
   "module": "src/watchable.js",
   "jsnext:main": "src/watchable.js",
+  "typings": "src/watchable.d.ts",
   "scripts": {
     "test": "karma start",
     "build": "tsc",
-    "dist": "webpack"
+    "dist": "webpack",
+    "prepublishOnly": "npm run build && npm run dist"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "daniel.schuba@footage.one",
+  "homepage": "https://github.com/footageone/watchable",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/footageone/watchable.git"
+  },
+  "license": "MIT",
   "devDependencies": {
     "@types/jasmine": "^2.8.8",
     "istanbul-instrumenter-loader": "^3.0.1",
