@@ -11,7 +11,8 @@
     "test": "karma start",
     "build": "tsc",
     "dist": "webpack",
-    "prepublishOnly": "npm run build && npm run dist"
+    "preversion": "npm run test && npm run build && npm run dist",
+    "postversion": "git push && git push --tags"
   },
   "author": "daniel.schuba@footage.one",
   "homepage": "https://github.com/footageone/watchable",
